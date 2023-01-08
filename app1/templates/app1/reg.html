@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'app1/style.css' %}">
+</head>
+<body>
+    <h1>Реєстрація</h1>
+    {% if error_text != None %}
+    <p>{{error_text}} </p>
+    {% endif %}
+    
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" placeholder="ім'я користувача" name = 'user_name' value="{{user_name}}">
+        <input type="password" placeholder="Пароль" name="password" value="{{password}}">
+        <input type="password" placeholder="Повторіть пароль" name="confirm_password" value="{{confirm_password}}">
+        <input type="submit" value="Зареєструватись">
+    </form>
+</body>
+</html>
