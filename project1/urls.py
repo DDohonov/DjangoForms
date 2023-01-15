@@ -21,4 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('reg/', register),
     path('succsesful/', reg_succsesful, name = 'succsesful'),
+    path('auth/', auth_page, name = 'auth_page'),
+    path('welcome/', welcome, name = 'welcome'),
+    path('logout/', user_logout, name = 'user_logout'),
 ]
