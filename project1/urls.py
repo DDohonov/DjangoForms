@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app1.views import *
-
+from comments.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('reg/', register),
@@ -24,4 +24,5 @@ urlpatterns = [
     path('auth/', auth_page, name = 'auth_page'),
     path('welcome/', welcome, name = 'welcome'),
     path('logout/', user_logout, name = 'user_logout'),
+    path('comments/', showpage, name = 'show_comments'),
 ]
